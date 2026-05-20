@@ -1,6 +1,8 @@
 
 # Auditoría ASG y Refactorización Sostenible
-**Módulo:** Sostenibilidad Aplicada al Sistema Productivo | **Unidad:** 6 | **RA:** 6 | **Alumno:** Elena Sáez
+**Módulo:** Sostenibilidad Aplicada al Sistema Productivo  
+**Unidad:** 6   
+**Alumno:** Elena Sáez
 
 ---
 
@@ -21,7 +23,7 @@ Basándote en los principios de *Green Software Engineering*, el objetivo es ana
 
 ## 2. Fases de la Auditoría
 
-### Fase 1 — Dimensión Ambiental (A)
+### Fase 1: Dimensión Ambiental (A)
 
 **1. Medición inicial**
 Se utilizó *Lighthouse* para obtener la huella de carbono estimada por visita.
@@ -42,7 +44,7 @@ Sí. La web presenta dependencias excesivas de JavaScript, una cantidad despropo
 
 ---
 
-### Fase 2 — Dimensión Social (S)
+### Fase 2: Dimensión Social (S)
 
 **1. Test de accesibilidad**
 Se utilizó la extensión *Lighthouse* en Chrome:
@@ -61,7 +63,7 @@ Los resultados muestran indicadores mayoritariamente en rojo/naranja, lo que ref
 
 ---
 
-### Fase 3 — Dimensión de Gobernanza (G)
+### Fase 3: Dimensión de Gobernanza (G)
 
 **1. Transparencia en cookies**
 La web permite rechazar cookies no esenciales sin forzar al usuario a aceptarlas ni exigir suscripción de pago. No se detectan patrones oscuros graves en este aspecto.
@@ -71,7 +73,7 @@ Solo se solicita correo electrónico y contraseña. También permite acceso medi
 
 ---
 
-### Fase 4 — Propuesta de Refactorización
+### Fase 4: Propuesta de Refactorización
 
 **Optimización de activos**
 - **Formato de imágenes:** Se recomienda WebP por su alto nivel de compresión sin pérdida de calidad visible, frente a PNG o JPG.
@@ -125,7 +127,6 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 **Imágenes**
 
 *Antes*: PNG sin optimizar y sin carga diferida:
-<img width="444" height="39" alt="image" src="https://github.com/user-attachments/assets/7d9d15d3-dfd8-4c1d-ac65-22331a0bcd24" />
 
 ```html
 <img src="logo_expansion_noticia.png" alt="expansion.com"/>
