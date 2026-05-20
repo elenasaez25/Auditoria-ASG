@@ -100,7 +100,10 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 <script src="autosuggest.js"></script>
 ```
 
-*Después*: Utilizo el atributo `defer` para indicar al navegador que descargue el archivo JavaScript en segundo plano mientras sigue leyendo el resto de la página. 
+*Después*: Utilizo el atributo `defer` para indicar al navegador que descargue el archivo JavaScript en segundo plano mientras sigue leyendo el resto de la página.  
+Nota Importante: Anteriormente he comentado que las librerías script las eliminaría, pero en este caso, al no poder
+cambiar el diseño original de la página web que está ejecutando JavaScript (`autosuggest.js, ue-utils.js, jquery.min.js`), en el HTML necesito alguna forma de cargar JavaScript
+por lo que lo dejaría tal cual excepto que cuando utilizo el atributo `defer`, indico que el navegador descargue estos archivos de JavaScript en segundo plano.
 
 ```html
 <script src="jquery.min.js" defer></script>
