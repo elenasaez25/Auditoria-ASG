@@ -45,7 +45,7 @@ Sí. La web presenta dependencias excesivas de JavaScript, una cantidad despropo
 ### Fase 2 — Dimensión Social (S)
 
 **1. Test de accesibilidad**
-Se utilizó la extensión *Lighthouse* en Chrome.
+Se utilizó la extensión *Lighthouse* en Chrome:
 
 <img width="825" height="716" alt="image" src="https://github.com/user-attachments/assets/6cd4da83-4e4c-4159-bd5b-b2b2c5a90fa3" />
 
@@ -64,14 +64,14 @@ Los resultados muestran indicadores mayoritariamente en rojo/naranja, lo que ref
 ### Fase 3 — Dimensión de Gobernanza (G)
 
 **1. Transparencia en cookies**
-La web permite rechazar cookies no esenciales sin forzar al usuario a aceptarlas ni exigir suscripción de pago. No se detectan patrones oscuros (*dark patterns*) graves en este aspecto.
+La web permite rechazar cookies no esenciales sin forzar al usuario a aceptarlas ni exigir suscripción de pago. No se detectan patrones oscuros graves en este aspecto.
 
 **2. Datos personales solicitados**
 Solo se solicita correo electrónico y contraseña. También permite acceso mediante cuenta de Google o Microsoft. No se recogen datos excesivos como dirección, código postal o teléfono.
 
 ---
 
-### Fase 4 — Propuesta de Refactorización (*Green Coding*)
+### Fase 4 — Propuesta de Refactorización
 
 **Optimización de activos**
 - **Formato de imágenes:** Se recomienda WebP por su alto nivel de compresión sin pérdida de calidad visible, frente a PNG o JPG.
@@ -98,7 +98,8 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 <script src="autosuggest.js"></script>
 ```
 
-*Después*: con atributo `defer` para no bloquear:
+*Después*: Utilizo el atributo `defer` para indicar al navegador que descargue el archivo JavaScript en segundo plano mientras sigue leyendo el resto de la página. 
+
 ```html
 <script src="jquery.min.js" defer></script>
 <script src="ue-utils.js" defer></script>
@@ -108,8 +109,6 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 ---
 
 **Viewport**
-<img width="776" height="40" alt="image" src="https://github.com/user-attachments/assets/15149bbf-ccc4-47f4-9a9a-ff809b7a0e2d" />
-
 
 *Antes*: fijo a 1024px e impidiendo el zoom:
 ```html
@@ -133,7 +132,7 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 <img src="powered_by_axesor.png">
 ```
 
-*Después*: WebP con fallback y lazy loading:
+*Después*: WebP con lazy loading:
 ```html
 <picture>
   <source srcset="logo_expansion.webp" type="image/webp">
@@ -201,31 +200,6 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 ---
 
 ### 3.3 Mejoras de Gobernanza (G)
-
-**Scripts de tracking sin consentimiento previo**
-
-*Antes*: el píxel de contabilización y opti-digital se cargaban de inmediato al abrir la página:
-```html
-<script async src="//optiyield.opti-digital.com/pfc/?pubid=99071977"></script>
-<img src="https://pixelcounter.expansion.com/pixelcontabilizacion/pixelcontabilizacion.gif"/>
-```
-
-*Después*: bloqueados hasta que el usuario acepta:
-```javascript
-window.didomiOnReady.push(function(Didomi) {
-  if (Didomi.getUserConsentStatusForPurpose('analytics')) {
-    var s = document.createElement('script');
-    s.src = '//optiyield.opti-digital.com/pfc/?pubid=99071977';
-    document.head.appendChild(s);
-
-    var img = document.createElement('img');
-    img.src = 'https://pixelcounter.expansion.com/pixelcontabilizacion/pixelcontabilizacion.gif';
-    document.body.appendChild(img);
-  }
-});
-```
-
----
 
 **Código PHP visible en el HTML**
 
