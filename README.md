@@ -214,3 +214,12 @@ Si la optimización atrae más usuarios, el ahorro energético podría verse anu
 ```html
 <p>© 2026 Unidad Editorial</p>
 ```
+## Bibliografía (Estilo IEEE)
+
+[1] Axarnet, “Refactorización de código: qué es y por qué es importante,” *Axarnet Blog*. Disponible en: https://axarnet.es/blog/refactorizacion-codigo. [Accedido: 20-may-2026].
+
+[2] Mozilla Developer Network (MDN), “::placeholder,” *MDN Web Docs*. Disponible en: https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::placeholder. [Accedido: 20-may-2026].
+
+[3] Mozilla Developer Network (MDN), “viewport,” *MDN Web Docs*. Disponible en: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta/name/viewport. [Accedido: 20-may-2026].
+
+[4] W3Schools, “HTML script defer Attribute,” *W3Schools*. Disponible en: https://www.w3schools.com/tags/att_script_defer.asp. [Accedido: 20-may-2026].
